@@ -14,7 +14,7 @@ const anotherId = Symbol('123')
 
 console.log(id === anotherId);
 
-// const bigNumber = 3456543576654356754n
+const bigNumber = 3456543576654356754n
 
 
 
@@ -51,3 +51,26 @@ Arrays  =>  object
 Function  =>  function
 Object  =>  object
 */
+
+
+//Stack (Primitive), Heap (Non-primitive)
+
+let myYoutubename = "Saadkhandotcom"
+
+let anothername = myYoutubename
+anothername = "CoffeeaurCode"
+
+console.log(anothername);
+console.log(myYoutubename);
+
+let userOne = {
+    email: "saadkhan9605@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "saad@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
