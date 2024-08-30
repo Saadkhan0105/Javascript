@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Javascript</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervalId; // Declare the intervalId variable outside the functions
+
+    // Function to print the date with "hi"
+    const sayDate = function(str) {
+        console.log(str, Date.now());
+    };
+
+    // Event listener for the Start button
+    document.getElementById('start').addEventListener('click', () => {
+        // Check if intervalId is not set, then start the interval
+        if (!intervalId) {
+            intervalId = setInterval(sayDate, 1000, "hi");
+        }
+    });
+
+    // Event listener for the Stop button
+    document.getElementById('stop').addEventListener('click', () => {
+        // If intervalId is set, clear the interval and reset intervalId
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null; // Reset intervalId to indicate it's stopped
+            console.log("STOPPED");
+            
+        }
+    });
+</script>
+</html>
