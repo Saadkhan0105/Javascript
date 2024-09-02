@@ -22,3 +22,5 @@ Abstraction
 Encapsulation
 Inheritance
 Polymorphism
+
+## Javascripts default behavior is prototypal behavior
